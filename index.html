@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <tittle>React Hello World</tittle>
+</head>
+
+<body>
+    <div id="application-root"></div>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js">
+    </script>
+    <script type='text/babel'>
+            function App(props) {
+  console.log(props)
+  return (
+    <header>
+      {props.children}
+    </header>
+  );
+}
+
+ReactDOM.render(
+  <App className='my-class'>
+    <div>
+            <main>
+	<h1> Sally Student </h1>
+	<section>
+		<h2> Education </h2>
+		Sally went to school. Lots of school. Sally learned lots of things when she went to lots of school. <br/> Whatever it is
+			that you need Sally to do she will be the best at doing it.
+	</section>
+	<h3> Employment History </h3>
+	<ul>
+		<li>DEV4U<br/>
+				Independent Contractor<br/>
+					4/2015-Present<br/>
+						Sally has worked as a developer for DEV4U. Her dutys include designing and implementing cloud computing solutions for bussinesses
+						around the globe. </li>
+		<li> Ascent<br/>
+				Full Stack Web Developer<br/>
+					1/2012-4/2015<br/>
+						Sally worked for Ascent developing the user experience in order to provide visualizations without lag or delay for end users.
+		</li>
+    </ul>
+    <h4>Contact Information</h4>
+    <p>Sally Student</p>
+    <address>
+        <a href="mailto:SallyStudent@hotmail.com">SallyStudent@hotmail.com</a>
+        <br/>
+        <a href="tel:+123-456-7890">+123-456-7890</a>
+        <br/>
+        <img src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg" height="500px" alt="A glorious photo of the unbelievably talented and extraordinarily smart Sally Student." ></img>
+    </address>
+  </main>
+    </div>
+    </App>,
+  document.querySelector('#application-root')
+);
+        </script>
+</body>
+
+</html>
